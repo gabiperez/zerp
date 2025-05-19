@@ -80,8 +80,8 @@
       <div class="container">
         <div class="row align-items-center">
 
-          <div class="col-10 col-xl-2">
-            <h1 class="mb-0 site-logo"><img src="images/Logo.png" alt="Image" class="img-fluid"></h1>
+          <div class="col-3 col-xl-2">
+            <h1 class="mb-0 site-logo"><img src="images/Logo.png" alt="Image" class="img-fluid mb-4 mb-lg-4"></h1>
           </div> 
           
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -109,10 +109,10 @@
           <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
         </div>
+        
       </div>
       
     </header>
-
 
     
     <!-- <div class="container"> -->
@@ -124,13 +124,15 @@
 
               <div class="row justify-content-center mb-4">
                 <div class="col-md-10 text-center">
-                  <h1>We Love To Build <span class="typed-words"></span></h1>
+                  <h2 class="title">Diseñamos tu Web</h2>
+                  <h2 class="sub-title">Potenciamos tu Negocio</h2>
                   <p class="lead mb-5">Soluciones web que impulsan tu precencia digital
+                    <img src="images/institucional.png" alt="Image" class="img-fluid mb-4 mb-lg-4 img-institutional"> 
+                  </div>
                 </div>
+                
               </div>
-
             </div>
-          </div>
         </div>
       </div>  
       <!-- </div> -->
@@ -657,17 +659,7 @@
     <script src="js/jquery.sticky.js"></script>
 
     <script src="js/typed.js"></script>
-    <script>
-      var typed = new Typed('.typed-words', {
-        strings: ["Web Apps"," Comer"," Mobile Apps"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 4000,
-        startDelay: 1000,
-        loop: true,
-        showCursor: true
-      });
-    </script>
+   
 
     <script src="js/main.js"></script>
 
@@ -691,4 +683,38 @@
     width: 100%;
     height: auto;
   }
+
+  .title{
+font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: center;
+        max-width: 150rem;
+        margin: 0 0 1rem 0;
+        
+  }
+
+   .sub-title{
+font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+        font-weight: 500;
+        line-height: 1.2em;
+        text-align: center;
+        max-width: 150rem;
+        margin: 0 0 1rem 0;
+        
+  }
+  
+  .logo-institucional {
+  max-width: 300rem;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  .site-blocks-cover {
+    padding-top: 120px;
+  }
+}
 </style>
