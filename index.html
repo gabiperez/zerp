@@ -42,7 +42,7 @@
     <title>Zerp &mdash; Soluciones Web</title>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <!-- Botón flotante de WhatsApp -->
+    <!-- Botón WhatsApp -->
     <a
       href="https://wa.me/+542984678199"
       class="whatsapp-float"
@@ -149,7 +149,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="#contact-section" class="nav-link">Contacto</a>
+                    <a href="#contact-section">Contacto</a>
                   </li>
                 </ul>
               </nav>
@@ -432,7 +432,7 @@
             </div>
           </div>
         </div>
-        <div class="slide-one-item home-slider owl-carousel">
+        <div class="lead slide-one-item home-slider owl-carousel">
           <div>
             <div class="testimonial">
               <blockquote class="mb-5">
@@ -533,7 +533,7 @@
               </div>
             </div>
             <div
-              class="col-md-6 col-lg-4 mb-4 mb-lg-4"
+              class="d-none d-md-block col-md-6 col-lg-4 mb-4 mb-lg-4"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -577,7 +577,7 @@
             </div>
 
             <div
-              class="col-md-6 col-lg-4 mb-4 mb-lg-4"
+              class="d-none d-md-block col-md-6 col-lg-4 mb-4 mb-lg-4"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -651,7 +651,7 @@
               data-jarallax-element="50"
             >
               <img
-                src="images/img_13.jpg"
+                src="images/Digital-transformation.webp"
                 alt="Image"
                 class="img-fluid rounded"
               />
@@ -665,21 +665,16 @@
                 </div>
                 <div class="col-12 mb-4">
                   <p class="lead">
-                    Comenzamos creando sitios web para amigos y conocidos,
-                    simplemente por gusto y ganas de ayudar. Con el tiempo,
-                    vimos cómo esas herramientas impulsaban sus emprendimientos
-                    y marcaban una diferencia real. Entendimos que esto no podía
-                    quedarse solo ahí. Dimos el paso y pusimos nuestras
-                    habilidades al servicio de más personas, acompañando a
-                    emprendedores y marcas a crecer en el mundo digital. Desde
-                    entonces, hemos trabajado con empresas de diferentes rubros
-                    y tamaños, siempre con el mismo objetivo: ayudar a nuestros
-                    clientes a alcanzar sus metas y hacer crecer su negocio. Nos
-                    enfocamos en entender sus necesidades y ofrecer soluciones
-                    personalizadas que se adapten a su visión y objetivos.
+                    Transformamos ideas en soluciones digitales. Lo que comenzó
+                    como un deseo de ayudar, se convirtió en una misión:
+                    impulsar el crecimiento de emprendedores y marcas a través
+                    de estrategias web efectivas, personalizadas y alineadas con
+                    sus objetivos. Hoy cada proyecto es como si fuera propio,
+                    entendiendo las necesidades reales del cliente y creando
+                    herramientas que potencian su presencia online y su negocio.
                   </p>
                 </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                <div class="d-none d-xl-block col-md-12 mb-md-5 mb-0 col-lg-6">
                   <div class="unit-4">
                     <div class="unit-4-icon mr-4 mb-3">
                       <span class="text-primary icon-phonelink"></span>
@@ -694,7 +689,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
+                <div class="d-none d-xl-block col-md-12 mb-md-5 mb-0 col-lg-6">
                   <div class="unit-4">
                     <div class="unit-4-icon mr-4 mb-3">
                       <span class="text-primary icon-extension"></span>
@@ -766,31 +761,44 @@
           </div>
           <div class="row">
             <div class="col-md-12 mb-5">
-              <form action="#" class="p-5 bg-white">
+              <form
+                id="contact-form"
+                action="procesar-formulario.php"
+                method="POST"
+                class="p-5 bg-white"
+              >
                 <h2 class="h4 mb-5">Escribinos</h2>
 
                 <div class="row form-group">
                   <div class="col-md-6 mb-3 mb-md-0">
                     <label class="text-black" for="fname">Nombre</label>
-                    <input type="text" id="fname" class="form-control" />
+                    <input
+                      type="text"
+                      id="fname"
+                      name="nombre"
+                      class="form-control"
+                    />
                   </div>
                   <div class="col-md-6">
                     <label class="text-black" for="lname">Apellido</label>
-                    <input type="text" id="lname" class="form-control" />
+                    <input
+                      type="text"
+                      id="lname"
+                      name="apellido"
+                      class="form-control"
+                    />
                   </div>
                 </div>
 
                 <div class="row form-group">
                   <div class="col-md-12">
                     <label class="text-black" for="email">Email</label>
-                    <input type="email" id="email" class="form-control" />
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="col-md-12">
-                    <label class="text-black" for="subject">Tema</label>
-                    <input type="subject" id="subject" class="form-control" />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                    />
                   </div>
                 </div>
 
@@ -798,7 +806,7 @@
                   <div class="col-md-12">
                     <label class="text-black" for="message">Mensaje</label>
                     <textarea
-                      name="message"
+                      name="mensaje"
                       id="message"
                       cols="30"
                       rows="7"
@@ -821,7 +829,94 @@
             </div>
           </div>
         </div>
+
+        <!-- Modal Bootstrap (vacío, se rellena desde JS) -->
+        <div
+          class="modal fade"
+          id="mensajeModal"
+          tabindex="-1"
+          aria-labelledby="mensajeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="mensajeModalLabel"></h5>
+              </div>
+              <div class="modal-body" id="modalMensaje"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  id="cerrarModal"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
+      <!-- Bootstrap JS y dependencias -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Script para validar y enviar con fetch AJAX -->
+      <script>
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("fname").value.trim();
+            const apellido = document.getElementById("lname").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensaje = document.getElementById("message").value.trim();
+
+            const alertBox = document.getElementById("modalMensaje");
+            const modalTitle = document.getElementById("mensajeModalLabel");
+            const mensajeModal = new bootstrap.Modal(
+              document.getElementById("mensajeModal")
+            );
+
+            if (!nombre || !apellido || !email || !mensaje) {
+              modalTitle.textContent = "Error";
+              alertBox.textContent = "Por favor completá todos los campos.";
+              mensajeModal.show();
+              return;
+            }
+
+            // Preparamos datos para enviar
+            const formData = new FormData(this);
+
+            fetch("procesar-formulario.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.success) {
+                  modalTitle.textContent = "Éxito";
+                  alertBox.textContent = "Mensaje enviado correctamente.";
+                } else {
+                  modalTitle.textContent = "Error";
+                  alertBox.textContent = "Error al enviar el mensaje.";
+                }
+                mensajeModal.show();
+
+                // Recarga la página al cerrar el modal
+                document.getElementById("cerrarModal").onclick = function () {
+                  window.location.reload();
+                };
+              })
+              .catch(() => {
+                modalTitle.textContent = "Error";
+                alertBox.textContent = "Error al enviar el mensaje.";
+                mensajeModal.show();
+              });
+          });
+      </script>
 
       <footer class="site-footer">
         <div class="container">
@@ -968,13 +1063,14 @@
   }
 
   .logo-institucional {
-    max-width: 100%;
+    max-width: 400px;
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+
   .site-blocks-cover {
     padding-top: 10%;
     padding-bottom: 10%;
@@ -983,7 +1079,7 @@
     position: relative;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 768vw) {
     .logo-institucional {
       max-width: 90vw;
     }
